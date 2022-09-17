@@ -4,6 +4,9 @@
 #include <stdio.h>
 
 /* betty style doc for function main goes there */
+/*
+ * main - Program generates random numbers and prints out either -ve, +ve, or zero.
+ */
 int main(void)
 {
 	int n;

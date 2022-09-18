@@ -1,18 +1,19 @@
 #include <stdio.h>
-#include <stdlib.h>
+
 /**
- * main - This program returns single numbers from 0 - 10 on a new line
- * Return: return 0 if successful
+ * main - This program prints from 0 to 9 using putchar
+ * Return: Always 0 (Success)
  */
 
 int main(void)
 {
-	int i = 0;
+	int i = '0';
 
-	for (i = 0; i < 10; i++)
+	while (i <= '9')
 	{
-		printf("%d\n", i);
+		putchar(i);
 	}
 	putchar('\n');
+
 	return (0);
 }

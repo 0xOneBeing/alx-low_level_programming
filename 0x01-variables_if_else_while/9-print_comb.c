@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - This program prints numbers from 0 to 9 separated by a comma followed by a space
+ * main - Program to print numbers from 0-9 separated by a comma then a space
  * Return: Always 0 (Success)
  */
 

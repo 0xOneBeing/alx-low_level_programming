@@ -3,9 +3,11 @@
 /* more headers goes there */
 #include <stdio.h>
 
-/*
- * main - Program generates random numbers and prints out either -ve, +ve, or zero.
+/**
+ * main - main fuction generate a random number
+ * Return: return 0(successful)
  */
+
 int main(void)
 {
 	int n;

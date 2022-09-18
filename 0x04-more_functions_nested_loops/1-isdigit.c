@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _isdigit - Program checks wether a number passed is a digit number
+ * _isdigit - checks wether a number passed as an argument is digit number
  * @value: argument to be checked
  * Return: returns 1 if successful or 0 if otherwise
  */

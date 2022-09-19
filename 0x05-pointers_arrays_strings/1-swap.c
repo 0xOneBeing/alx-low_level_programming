@@ -7,11 +7,11 @@
  * @swapper: integer swapper acting like a temp
  */
 
-int swapper;
-
 void swap_int(int *a, int *b)
 {
-	swapper = *a;
+	int t;
+
+	t = *a;
 	*a = *b;
-	*b = swapper;
+	*b = t;
 }

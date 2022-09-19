@@ -12,11 +12,11 @@ void print_rev(char *s)
 	int i, l, t;
 
 	l = strlen(s);
-	for (i = 0; i < l/2; i++)
+	for (i = 0; i < l / 2; i++)
 	{
 		t = s[i];
 		s[i] = s[l - i - 1];
-		s[l -i -1] = t;
+		s[l - i - 1] = t;
 	}
 	getchar();
 }

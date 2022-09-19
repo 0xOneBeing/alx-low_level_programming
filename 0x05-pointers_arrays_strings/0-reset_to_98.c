@@ -6,7 +6,7 @@
  * Return: Always 0
  */
 
-int reset_to_98(int *p)
+int reset_to_98(void)
 {
 
 	return (0);

@@ -3,7 +3,6 @@
 /**
  * reset_to_98 - Updates value pointed to to 98
  * *n - Pointer n to address in memoring handling update
- * Return: Always 0
  */
 
 void reset_to_98(int *n)

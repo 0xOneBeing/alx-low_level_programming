@@ -5,18 +5,20 @@
 /**
  * print_rev - Prints the reverse of a string
  * @s: string variable 's'
+ *
+ * Return: Always (0)
  */
 
 void print_rev(char *s)
 {
-	int i, l, t;
+	void print_rev(char *s)
+{
+	int i = 0;
 
-	l = strlen(s);
-	for (i = 0; i < l / 2; i++)
-	{
-		t = s[i];
-		s[i] = s[l - i - 1];
-		s[l - i - 1] = t;
-	}
-	getchar();
+	while (s[i])
+		i++;
+	while (i--)
+		_putchar(s[i]);
+	_putchar('\n');
+}
 }

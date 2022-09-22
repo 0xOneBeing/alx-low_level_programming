@@ -1,10 +1,10 @@
 #include "main.h"
-#include <stdio.h>
-#include <string.h>
 
 /**
  * _strcat - Fxn prints the result of two concatenated string
- *
+ * @dest: char variabke 'dest'
+ * @src: char variable 'src'
+ * Return: 'dest' - the concatenated string
  */
 
 char *_strcat(char *dest, char *src)

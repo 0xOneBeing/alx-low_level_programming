@@ -1,22 +1,20 @@
-#include "main.h";
+#include "main.h"
 
 /**
- * _memset - Fxn fills memory with a constant byte
- *
- * @s: char variable 's'
- * @b: char varaiabke 'b'
- * @n: unsigned in variable 'n'
- *
- * Return - the pointer to the memory area 's'
- *
+ * *_memset - fills memory with a constant byte.
+ * @s: pointer to put the constant
+ * @b: constant
+ * @n: max bytes to use
+ * Return: s
  */
 
 char *_memset(char *s, char b, unsigned int n)
 {
-	while (n)
+	unsigned int i;
+
+	for (i = 0; n > 0; i++, n--)
 	{
-		s[n - 1] = b;
-		n++;
+		s[i] = b;
 	}
 
 	return (s);

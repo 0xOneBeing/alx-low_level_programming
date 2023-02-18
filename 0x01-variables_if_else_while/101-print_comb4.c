@@ -8,7 +8,9 @@
 
 int main(void)
 {
-	int i, j, k = '0';
+	int i = '0';
+	int j = '0';
+	int k = '0';
 
 	for (k = '0'; k <= '9'; k++)
 	{
@@ -16,8 +18,7 @@ int main(void)
 		{
 			for (i = '0'; i <= '9'; i++)
 			{
-				if (!((i == j) || (k == j) ||
-						(j > i) || (k > j)))
+				if (!((i == j) || (k == j) || (j > i) || (k > j)))
 				{
 					putchar(k);
 					putchar(j);

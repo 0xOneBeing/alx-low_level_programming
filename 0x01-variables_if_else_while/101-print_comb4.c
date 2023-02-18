@@ -23,7 +23,7 @@ int main(void)
 					putchar(k);
 					putchar(j);
 					putchar(i);
-					if (!(i == '9' && k == '7' && tens == '8'))
+					if (!(i == '9' && k == '7' && j == '8'))
 					{
 						putchar(',');
 						putchar(' ');

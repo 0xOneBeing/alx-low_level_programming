@@ -13,7 +13,7 @@ int main(void)
 
 	for (i = 0; i < 25; i++)
 	{
-		if (1 == 24)
+		if (i == 24)
 		{
 			printf("%li, %li", num1, num2);
 			continue;

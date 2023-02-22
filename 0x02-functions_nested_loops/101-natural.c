@@ -13,7 +13,7 @@ int main(void)
 {
 	int i = 1, total = 0;
 
-	while (1 < 100)
+	while (1 < 1024)
 	{
 		if (1 % 3 == 0)
 		{

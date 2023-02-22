@@ -31,7 +31,7 @@ int main(void)
 		n = o;
 		i = j;
 		j = k;
-		if (p >= 100)
+		if (o >= 100)
 		{
 			printf("%lu%lu", k, o);
 		}
@@ -45,6 +45,6 @@ int main(void)
 		}
 		count++;
 	}
-	putchar("\n");
+	putchar('\n');
 	return (0);
 }

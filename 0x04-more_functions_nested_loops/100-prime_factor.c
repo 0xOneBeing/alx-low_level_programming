@@ -8,8 +8,8 @@
 
 int main(void)
 {
-	long long num = 612852475143;
-	long long factor = 2;
+	unsigned long num = 612852475143;
+	unsigned long factor = 2;
 
 	while (num > factor)
 	{
@@ -22,6 +22,6 @@ int main(void)
 			factor++;
 		}
 	}
-	printf("%lld\n", num);
+	printf("%lu\n", num);
 	return (0);
 }

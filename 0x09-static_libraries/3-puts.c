@@ -1,13 +1,22 @@
 #include <stdio.h>
+#include "main.h"
 
 /**
- * main - Entry point
- * Description: C program that prints a function followed by a new line
- * Return: 0 if successful
+ * _puts - prints a string
+ * @str: string to print
+ *
+ * Description: prints a string
+ * Return: return 0
  */
 
-int main(void)
+void _puts(char *str)
 {
-	puts("\"Programming is like building a multilingual puzzle");
-	return (0);
+	int i = 0;
+
+	while (*(str + i) != '\0')
+	{
+		putchar(*(str + i));
+		i++;
+	}
+	putchar(10);
 }

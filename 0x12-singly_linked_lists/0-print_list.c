@@ -3,21 +3,19 @@
 
 /**
  * print_list - Fxn that prints all elements of a list
- * @h: param list
+ * @h: A list
  * Return: elements of a list
  */
 
 size_t print_list(const list_t *h)
 {
-	size_t element;
+	size_t element = 0;
 
-	element = 0;
 	while (h != NULL)
 	{
 		if (h->str == NULL)
 		{
-			A
-			printf("[%d] %s\n", 0, "(nil)");
+			printf("[0] (nil)\n");
 		}
 		else
 		{
@@ -26,5 +24,6 @@ size_t print_list(const list_t *h)
 		h = h->next;
 		element++;
 	}
+
 	return (element);
 }

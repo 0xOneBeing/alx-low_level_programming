@@ -1,10 +1,10 @@
-#include "lists.h"
 #include <stdio.h>
+#include "lists.h"
 
 /**
  * print_list - Fxn that prints all elements of a list
  * @h: param list
- * Return: struct
+ * Return: elements of a list
  */
 
 size_t print_list(const list_t *h)
@@ -16,6 +16,7 @@ size_t print_list(const list_t *h)
 	{
 		if (h->str == NULL)
 		{
+			A
 			printf("[%d] %s\n", 0, "(nil)");
 		}
 		else

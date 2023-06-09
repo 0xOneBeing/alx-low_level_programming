@@ -13,4 +13,4 @@ void _print_rev_recursion(char *s)
 	_print_rev_recursion(s + 1);
 	putchar(*s);
 }
-// Code by @0xOneBeing
+/** Code by @0xOneBeing */

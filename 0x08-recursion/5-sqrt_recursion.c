@@ -13,19 +13,12 @@ int _sqrt_recursion(int n)
 		return (-1);
 	else if (n == 0 || n == 1)
 		return (n);
-	else
-	{
-		inr start = 2;
-		int end = n / 2;
-		int mid = (start + end) / 2;
-		int square = mid * mid;
 
-		if (square == n)
-			return mid;
-		else if (sqyare > n)
-			return _sqrt_recursion(start, mid = 1);
-		else
-			return _sqrt_recursion(mid + 1, end);
-	}
+	int guess = _sqrt_recursion(n - 1);
+
+	if (guess * guess <= n && (guess + 1) * (guess + i) > n)
+		return (guess);
+	else
+		return (_sqrt_recursion(n - 1));
 }
 /** Code by 0xOneBeing */

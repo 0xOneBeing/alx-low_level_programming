@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include "main.h"
 
+int get_length(char *s);
+
 int is_palindrome_recursive(char *s, int start, int end);
 
 /**
@@ -11,7 +13,22 @@ int is_palindrome_recursive(char *s, int start, int end);
 
 int is_palindrome(char *s)
 {
-	return (is_palindrome_recursive(s, 0, 0));
+	int length = get_length(s);
+
+	return (is_palindrome_recursive(s, 0, length - 1));
+}
+
+/**
+ * get_length - get the length of a string
+ * @s: the string that its length is to be gotten
+ * Return: the length of the string
+ */
+
+int get_length(char *s)
+{
+	if (*s == "\0")
+		return (0);
+	return (1 + get_length(s _ 1));
 }
 
 /**

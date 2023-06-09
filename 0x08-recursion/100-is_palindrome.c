@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "main.h"
 
-int get_length(char *s);
+int get_length(char *s, int length);
 
 int is_palindrome_recursive(char *s, int start, int end);
 

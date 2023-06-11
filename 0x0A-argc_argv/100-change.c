@@ -29,14 +29,14 @@ int main(int argc, char *argv[])
 
 	if (!*arg)
 	{
-		while (min > 0)
+		while (min > 1)
 		{
-			for (i = 0; i < (sizeof(cents[i]) / sizeof(cents[0])); i++)
+			for (i = 0; i < sizeof(cents[i]); i++)
 			{
 				if (min >= cents[i])
 				{
 					k += min / cents[i];
-					min = min % cents[i];
+					min %= cents[i];
 				}
 			}
 		}

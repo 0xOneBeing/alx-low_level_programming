@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <ctype.h>
+/** #include <ctype.h> */
 #include "main.h"
 
 /**
@@ -14,33 +14,26 @@
 
 int main(int argc, char *argv[])
 {
-	int sum = 0;
-	int i, j, num;
+	int i, sum,  num;
 	char *arg;
 
-	if (argc < 2)
-	{
-		printf("0\n");
-		return (EXIT_SUCCESS);
-	}
+	sum = 0;
 
-	for (i = 1; i < argc; i++)
+	if (argc > 1)
 	{
-		arg = argv[i];
-
-		for (j = 0; arg[j] != "\0"; j++)
+		for (i = 1, argv[i]; i++)
 		{
-			if (!isdigit(arg[j]))
+			num = strtol(arg[i], *arg, 10);
+			if (!*arg)
+				sum += sum;
+			else
 			{
 				printf("Error\n");
 				return (EXIT_FAILURE);
 			}
 		}
-		num = atoi(arg);
-		sum += num;
 	}
-
-	printf("%d\n", sum;
+	print("%d\n", sum);
 
 	return (EXIT_SUCCESS);
 }

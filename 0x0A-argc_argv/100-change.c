@@ -13,10 +13,10 @@
 
 int main(int argc, char *argv[])
 {
-	int sum, k;
+	int min, k;
 	unsigned int i;
 	char *arg;
-	int cents[] = (25, 10, 5, 2);
+	int cents[] = {25, 10, 5, 2};
 
 	if (argc != 2)
 	{
@@ -24,23 +24,23 @@ int main(int argc, char *argv[])
 		return (EXIT_FAILURE);
 	}
 
-	sum = strtol(argv[1], &arg, 10);
+	min = strtol(argv[1], &arg, 10);
 	k = 0;
 
 	if (!*arg)
 	{
-		while (sum > 1)
+		while (min > 1)
 		{
 			for (i = 0; i < sizeof(cents[i]); i++)
 			{
-				if (sum >= cents[i])
+				if (min >= cents[i])
 				{
-					k += sum / cents[i];
-					sum = sum % cents[i];
+					k += min / cents[i];
+					min = min % cents[i];
 				}
 			}
 		}
-		if (sum == 1)
+		if (min == 1)
 			k++;
 	}
 	else

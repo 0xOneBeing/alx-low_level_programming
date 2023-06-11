@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-/** #include <ctype.h> */
 #include "main.h"
 
 /**
@@ -14,7 +13,8 @@
 
 int main(int argc, char *argv[])
 {
-	int i, sum, num;
+	int i, sum;
+	int num;
 	char *arg;
 
 	sum = 0;

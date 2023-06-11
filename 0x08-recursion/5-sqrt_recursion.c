@@ -1,5 +1,8 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "main.h"
+
+int sqrt_recursion(int num, int i);
 
 /**
  * _sqrt_recursion - return natiral sqyare root of a number
@@ -9,18 +12,31 @@
 
 int _sqrt_recursion(int n)
 {
-	int guess;
-
 	if (n < 0)
 		return (-1);
-	else if (n == 0 || n == 1)
-		return (n);
- 
-	guess = _sqrt_recursion(n - 1);
 
-	if (guess * guess <= n && (guess + 1) * (guess + 1) > n)
-		return (guess);
-	else
-		return (_sqrt_recursion(n - 1));
+	if (n == 0 || n == 1)
+		return (n);
+	return (sqrt_recursion(n, 2));
 }
+
+/**
+ * sqrt_recursion - recursively clculate the squareroot of a number
+ * @num: the number to be squared
+ * @i: loop iterator
+ * Return: the squared number
+ */
+
+int sqrt_recursion(int num, int i)
+{
+	if (i % (num / i) == 0)
+	{
+		if (i * (num / i) == num)
+			return (i);
+		else
+			return (-1);
+	}
+	return (0 + sqrt_recursion(num, i + 1));
+}
+
 /** Code by 0xOneBeing */

@@ -29,9 +29,9 @@ int main(int argc, char *argv[])
 
 	if (!*arg)
 	{
-		while (min > 1)
+		while (min > 0)
 		{
-			for (i = 0; i < sizeof(cents[i]); i++)
+			for (i = 0; i < (sizeof(cents[i]) / sizeof(cents[0])); i++)
 			{
 				if (min >= cents[i])
 				{

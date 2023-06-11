@@ -1,52 +1,55 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "main.h"
 
-int get_length(char *s, int length);
-
-int is_palindrome_recursive(char *s, int start, int end);
+int match(char *s, int l_lim, int u_lim);
+int palin_recursion(char *s);
 
 /**
- * is_palindrome - is the string a palindrome?
- * @s: the string to check for palindrome plausibility
- * Return: (0) or (1)
+ * is_palindrome - checks if a string is a palindrome or not
+ * @s: the string to be cheked
+ * Return: 
+ * 
+ * Code by 0xOneBeing
  */
 
 int is_palindrome(char *s)
 {
-	int length = get_length(s, 0);
-
-	return (is_palindrome_recursive(s, 0, length - 1));
+	if (*s == "\0")
+		return (EXIT_FAILURE);
+	return (match(s, 0, palind_recursion(s) - 1));
 }
 
 /**
- * get_length - get the length of a string
- * @s: the string that its length is to be gotten
- * @length: length
- * Return: the length of the string
+ * match - checks if there is a match in string
+ * @s: string to check
+ * @l_lim: lower limit
+ * @u_lim: upper limit
+ * Return: (EXIT_SUCCESS) - safe exit
  */
 
-int get_length(char *s, int length)
+int match(char *s, int l_lim, int u_lim)
 {
-	if (s[length] == "\0")
-		return (length);
-	return (get_length(s, length + 1));
+	if (*(s + l_lim) == *(s + u_lim))
+	{
+		if (l_lim == u_lim || l_lim == u_lim + 1)
+			return (EXIT_FAILURE);
+		return (0 + match(s, l_lim + 1, u_lim - 1));
+	}
+
+	return (EXIT_SUCCESS);
 }
 
 /**
- * is_palindrome_recursive - checks if palindrome is recursive
- * @s: the string to check
- * @start: where to start
- * @end: where to finish
- * Return: plausible palindrome
+ * palin_recursion - prints palindrom recursively
+ * @s: the string
+ * Return: (0) or (1 + palin_recursion(s + 1))
  */
 
-int is_palindrome_recursive(char *s, int start, int end)
+int palin_recursion(char *s)
 {
-	if (start >= end)
-		return (1);
-
-	if (s[start] != s[end])
-		return (0);
-
-	return (is_palindrome_recursive(s, start + 1, end - 1));
+	if (*s == "\0")
+		return (EXIT_SUCCESS);
+	else
+		return (1 + palin_recursion(s + 1));
 }

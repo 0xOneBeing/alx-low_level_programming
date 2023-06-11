@@ -17,7 +17,7 @@ int is_palindrome(char *s)
 {
 	if (*s == '\0')
 		return (EXIT_FAILURE);
-	return (match(s, 0, palind_recursion(s) - 1));
+	return (match(s, 0, palin_recursion(s) - 1));
 }
 
 /**

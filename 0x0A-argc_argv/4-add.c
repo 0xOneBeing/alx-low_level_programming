@@ -14,14 +14,14 @@
 
 int main(int argc, char *argv[])
 {
-	int i, sum,  num;
+	int i, sum, num;
 	char *arg;
 
 	sum = 0;
 
 	if (argc > 1)
 	{
-		for (i = 1, argv[i]; i++)
+		for (i = 1; argv[i]; i++)
 		{
 			num = strtol(arg[i], *arg, 10);
 			if (!*arg)

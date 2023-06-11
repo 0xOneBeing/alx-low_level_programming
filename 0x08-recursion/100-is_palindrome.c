@@ -8,14 +8,14 @@ int palin_recursion(char *s);
 /**
  * is_palindrome - checks if a string is a palindrome or not
  * @s: the string to be cheked
- * Return: 
- * 
+ * Return: result
+ *
  * Code by 0xOneBeing
  */
 
 int is_palindrome(char *s)
 {
-	if (*s == "\0")
+	if (*s == '\0')
 		return (EXIT_FAILURE);
 	return (match(s, 0, palind_recursion(s) - 1));
 }
@@ -48,7 +48,7 @@ int match(char *s, int l_lim, int u_lim)
 
 int palin_recursion(char *s)
 {
-	if (*s == "\0")
+	if (*s == '\0')
 		return (EXIT_SUCCESS);
 	else
 		return (1 + palin_recursion(s + 1));

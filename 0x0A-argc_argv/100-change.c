@@ -13,10 +13,10 @@
 
 int main(int argc, char *argv[])
 {
-	int sum, i;
+	int sum, k;
 	unsigned int i;
 	char *arg;
-	int cents[] = (25, 10, 5, 3);
+	int cents[] = (25, 10, 5, 2);
 
 	if (argc != 2)
 	{
@@ -24,10 +24,10 @@ int main(int argc, char *argv[])
 		return (EXIT_FAILURE);
 	}
 
-	sum = strtol(argv[i], &arg, 10);
-	i = 0;
+	sum = strtol(argv[1], &arg, 10);
+	k = 0;
 
-	if (!&arg)
+	if (!*arg)
 	{
 		while (sum > 1)
 		{
@@ -35,13 +35,13 @@ int main(int argc, char *argv[])
 			{
 				if (sum >= cents[i])
 				{
-					i += sum / cents[i];
+					k += sum / cents[i];
 					sum = sum % cents[i];
 				}
 			}
 		}
 		if (sum == 1)
-			i++;
+			k++;
 	}
 	else
 	{
@@ -49,7 +49,7 @@ int main(int argc, char *argv[])
 		return (EXIT_FAILURE);
 	}
 
-	printf("%d\n", i);
+	printf("%d\n", k);
 
 	return (EXIT_SUCCESS);
 }

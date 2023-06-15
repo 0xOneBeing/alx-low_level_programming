@@ -4,7 +4,9 @@
 /**
  * free_grid - frees up allocated memory space
  * @grid: the grid
- * @height: the height 
+ * @height: the height
+ *
+ * Code by 0xOneBeing
  */
 
 void free_grid(int **grid, int height)

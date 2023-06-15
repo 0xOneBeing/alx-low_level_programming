@@ -14,7 +14,7 @@ int length(char *str);
 
 char *argstostr(int ac, char **av)
 {
-	char *str;
+	char *str = NULL;
 	int j = 0, k = 0, sum = 0, temp = 0;
 
 	if (ac == 0 || av == NULL)

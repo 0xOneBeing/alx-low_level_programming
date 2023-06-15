@@ -4,7 +4,7 @@
 /**
  * _strdup - returns pointer to newly allocated space in memeory
  * @str: the string
- * Return: duplicate
+ * Return: null or pointer to allocated space
  *
  * Code by 0xOneBeing
  */
@@ -13,17 +13,21 @@ char *_strdup(char *str)
 {
 	size_t length;
 	char *duplicate;
+	int i;
 
 	length = strlen(str);
 	duplicate = (char *) malloc((length + 1) * sizeof(char));
 
-	if (str == NULL)
+	if ((str == NULL) == (duplicate == NULL))
 		return (NULL);
 
-	if (duplicate == NULL)
-		return (NULL);
+	for (i = 0; str[i]; i++)
+	{
+		length++;
+		duplicate[i] = str[i];
+	}
 
-	strcpy(duplicate, str);
+	duplicate[length] = '\0';
 
 	return (duplicate);
 }

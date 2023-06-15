@@ -15,7 +15,7 @@ int length(char *str);
 char *argstostr(int ac, char **av)
 {
 	char *str;
-	int i, j = 0, sum = 0, temp = 0;
+	int i, j = 0, k = 0, sum = 0, temp = 0;
 
 	if (ac == 0 || av == NULL)
 		return (NULL);
@@ -27,14 +27,14 @@ char *argstostr(int ac, char **av)
 
 	if (str != NULL)
 	{
-		while (j < ac)
+		while (k < ac)
 		{
-			for (i = 0; av[j][i] != '\0'; i++)
-				str[i + temp] = av[j][i];
+			for (j = 0; av[k][j] != '\0'; j++)
+				str[j + temp] = av[k][j];
 
-			str[i + temp] = '\n';
-			temp += (i + 1);
-			j++;
+			str[j + temp] = '\n';
+			temp += (j + 1);
+			k++;
 		}
 		str[temp] = '\0';
 	}

@@ -11,6 +11,6 @@ int main(void)
 {
 	char *filename = __FILE__;
 
-	printf("%c\n", filename);
+	printf("%s\n", filename);
 	return (EXIT_SUCCESS);
 }

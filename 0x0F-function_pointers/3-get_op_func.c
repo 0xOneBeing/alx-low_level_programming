@@ -11,9 +11,9 @@
 
 int (*get_op_func(char *s))(int, int)
 {
-	op_t opa[] = {
+	op_t ops[] = {
 		{"+", op_add},
-		{"=", op_sub},
+		{"-", op_sub},
 		{"*", op_mul},
 		{"/", op_div},
 		{"%", op_mod},
@@ -23,8 +23,8 @@ int (*get_op_func(char *s))(int, int)
 
 	i = 0;
 
-	while (opa[i].op != NULL && *(opa[i].op) != *s)
+	while (ops[i].op != NULL && *(ops[i].op) != *s)
 		i++;
 
-	return (opa[i].f);
+	return (ops[i].f);
 }

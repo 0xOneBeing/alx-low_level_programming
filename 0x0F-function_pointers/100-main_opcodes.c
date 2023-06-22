@@ -10,7 +10,7 @@
  * Code by 0xOneBeing
  */
 
-int main(int argc, char argv[])
+int main(int argc, char *argv[])
 {
 	int i, bytes;
 	int (*address)(int, char **) = main;

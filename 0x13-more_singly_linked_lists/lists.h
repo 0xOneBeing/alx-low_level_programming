@@ -5,8 +5,8 @@
 
 /**
  * struct listint_s - singly linked list
- * @n: integer
- * @next: points to the next node
+ * @n: Integer variabe "n"
+ * @next: Points to the next node
  *
  * Code by 0xOneBeing
  */
